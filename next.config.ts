@@ -2,8 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  reactStrictMode: true,
-  basePath: 'gdirk07/next.js-todo-app',
+  basePath: '/gdirk07/next.js-todo-app',
+  assetPrefix: '/gdirk07/next.js-todo-app/',
+  images: {
+    unoptimized: true,
+  }
 };
 
 export default nextConfig;
