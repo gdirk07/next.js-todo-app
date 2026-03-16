@@ -1,0 +1,88 @@
+/* task-item.module.css */
+ 
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e8e5df;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  transition: box-shadow .2s, transform .15s;
+}
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+ 
+/* Checkbox */
+.checkbox {
+  width: 20px; height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  accent-color: #2d6a4f;   /* native checked color */
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+ 
+/* Task name */
+.name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1a1916;
+}
+.nameCompleted {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.deleteButton {
+  margin-left: auto;
+}
+
+.dueBadge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: monospace;
+  color: #888;
+  background: #f5f4f0;
+  border: 1px solid #e8e5df;
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+}
+.dueBadgeOverdue { color: #c0392b; background: #fdf3f2; border-color: #f5c6c2; }
+.dueBadgeSoon    { color: #9a6700; background: #fef9ec; border-color: #f0d58a; }
+ 
+.priority {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  user-select: none;
+}
+
+.prioritytag {
+  margin-left: auto;
+}
+
+.priorityLow    { color: #3b7a57; background: #edf7f1; border-color: #b8dfc9; }
+.priorityMedium { color: #8a6200; background: #fef9e7; border-color: #f0d575; }
+.priorityHigh   { color: #b84c00; background: #fff3eb; border-color: #f5bfa0; }
+.priorityUrgent {
+  color: #991b1b; background: #fef2f2; border-color: #fca5a5;
+  animation: urgentPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes urgentPulse {
+  0%, 100% { box-shadow: 0 0 0 0px rgba(153,27,27,0); }
+  50%       { box-shadow: 0 0 0 4px rgba(153,27,27,0.12); }
+}
